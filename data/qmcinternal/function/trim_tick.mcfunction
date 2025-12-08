@@ -1,0 +1,1 @@
+execute if items entity @s armor.chest minecraft:netherite_chestplate[minecraft:custom_data={rotating_trims:1}] run item replace entity @s armor.chest with minecraft:netherite_chestplate{}
