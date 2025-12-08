@@ -1,0 +1,24 @@
+execute if score @s ptmin < $ptTier1 consts run scoreboard players set @s qmc.temp 0
+execute if score @s ptmin >= $ptTier1 consts if score @s ptmin < $ptTier2 consts run scoreboard players set @s qmc.temp 1
+execute if score @s ptmin >= $ptTier2 consts if score @s ptmin < $ptTier3 consts run scoreboard players set @s qmc.temp 2
+execute if score @s ptmin >= $ptTier3 consts if score @s ptmin < $ptTier4 consts run scoreboard players set @s qmc.temp 3
+execute if score @s ptmin >= $ptTier4 consts if score @s ptmin < $ptTier5 consts run scoreboard players set @s qmc.temp 4
+execute if score @s ptmin >= $ptTier5 consts if score @s ptmin < $ptTier6 consts run scoreboard players set @s qmc.temp 5
+execute if score @s ptmin >= $ptTier6 consts run scoreboard players set @s qmc.temp 6
+
+$execute if score @s qmc.temp matches 0 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"gray","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+$execute if score @s qmc.temp matches 1 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"yellow","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+$execute if score @s qmc.temp matches 2 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"green","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+$execute if score @s qmc.temp matches 3 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"aqua","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+$execute if score @s qmc.temp matches 4 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"light_purple","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+$execute if score @s qmc.temp matches 5 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"gold","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+$execute if score @s qmc.temp matches 6 run scoreboard players display numberformat @s ptmin fixed [{"text":"  $(h)h $(m)min   ","color":"red","bold":true},{"text":"$(health)💗","color":"red","bold":false}]
+
+$execute unless data storage qmc:settings {DisablePTRankupMessages:1} unless score @s qmc.temp = @s qmc.lastScoreRanks if score @s ptmin >= $ptTier1 consts if score @s ptmin < $ptTier2 consts run tellraw @a ["",{"text":"Congratulations ","color":"green","bold":true},{"selector":"@s"}, {"text": " for reaching","color":"green"},{"text":" $(h) hours","color":"yellow","bold":true},{"text":" of playtime!","color":"green"}]
+$execute unless data storage qmc:settings {DisablePTRankupMessages:1} unless score @s qmc.temp = @s qmc.lastScoreRanks if score @s ptmin >= $ptTier2 consts if score @s ptmin < $ptTier3 consts run tellraw @a ["",{"text":"Congratulations ","color":"green","bold":true},{"selector":"@s"}, {"text": " for reaching","color":"green"},{"text":" $(h) hours","color":"green","bold":true},{"text":" of playtime!","color":"green"}]
+$execute unless data storage qmc:settings {DisablePTRankupMessages:1} unless score @s qmc.temp = @s qmc.lastScoreRanks if score @s ptmin >= $ptTier3 consts if score @s ptmin < $ptTier4 consts run tellraw @a ["",{"text":"Congratulations ","color":"green","bold":true},{"selector":"@s"}, {"text": " for reaching","color":"green"},{"text":" $(h) hours","color":"aqua","bold":true},{"text":" of playtime!","color":"green"}]
+$execute unless data storage qmc:settings {DisablePTRankupMessages:1} unless score @s qmc.temp = @s qmc.lastScoreRanks if score @s ptmin >= $ptTier4 consts if score @s ptmin < $ptTier5 consts run tellraw @a ["",{"text":"Congratulations ","color":"green","bold":true},{"selector":"@s"}, {"text": " for reaching","color":"green"},{"text":" $(h) hours","color":"light_purple","bold":true},{"text":" of playtime!","color":"green"}]
+$execute unless data storage qmc:settings {DisablePTRankupMessages:1} unless score @s qmc.temp = @s qmc.lastScoreRanks if score @s ptmin >= $ptTier5 consts if score @s ptmin < $ptTier6 consts run tellraw @a ["",{"text":"Congratulations ","color":"green","bold":true},{"selector":"@s"}, {"text": " for reaching","color":"green"},{"text":" $(h) hours","color":"gold","bold":true},{"text":" of playtime!","color":"green"}]
+$execute unless data storage qmc:settings {DisablePTRankupMessages:1} unless score @s qmc.temp = @s qmc.lastScoreRanks if score @s ptmin >= $ptTier6 consts run tellraw @a ["",{"text":"Congratulations ","color":"gold","bold":true},{"selector":"@s"}, {"text": " for reaching","color":"gold"},{"text":" $(h) hours","color":"red","bold":true},{"text":" of playtime!","color":"gold"}, {"text":" Holy moly!", "color":"light_purple","bold":true}]
+
+execute store result score @s qmc.lastScoreRanks run scoreboard players get @s qmc.temp

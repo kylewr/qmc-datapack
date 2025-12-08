@@ -1,0 +1,7 @@
+$execute if score @s deaths < $deathsTier1 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"aqua"}
+$execute if score @s deaths >= $deathsTier1 consts if score @s deaths < $deathsTier2 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"blue"}
+$execute if score @s deaths >= $deathsTier2 consts if score @s deaths < $deathsTier3 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"green"}
+$execute if score @s deaths >= $deathsTier3 consts if score @s deaths < $deathsTier4 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"yellow"}
+$execute if score @s deaths >= $deathsTier4 consts if score @s deaths < $deathsTier5 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"gold"}
+$execute if score @s deaths >= $deathsTier5 consts if score @s deaths < $deathsTier6 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"red"}
+$execute if score @s deaths >= $deathsTier6 consts run scoreboard players display numberformat @s deaths fixed {"text":" $(num) deaths", "color":"dark_red","bold":true}

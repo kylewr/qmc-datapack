@@ -1,0 +1,1 @@
+execute as @a[tag=hobo] at @s as @p[tag=!hobo, distance=..10] run tellraw @s ["",{"text":"<"},{"text":"Resident Hobo","color":"yellow"},{"text":"> "},{"text":"SQUATTERS RIGHTS!!!1!11!!1 GET THE FUCK OUT OR ELSE BIG BLACK MEN WILL COME YOUR WAY","color":"red"}]
