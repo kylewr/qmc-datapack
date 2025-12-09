@@ -24,5 +24,10 @@ scoreboard players set $ptTier4 consts 120
 scoreboard players set $ptTier5 consts 160
 scoreboard players set $ptTier6 consts 200
 
+scoreboard objectives add qmc.trimticks dummy
+scoreboard objectives add qmc.trimmat dummy
+scoreboard players set $max_trim_mat qmc.trimmat 12
+data modify storage qmc:settings TrimRotations.time set value 20
+data merge storage qmc:settings {Trims:["minecraft:amethyst","minecraft:copper","minecraft:diamond","minecraft:emerald","minecraft:gold","minecraft:iron","minecraft:lapis","minecraft:redstone","minecraft:netherite","minecraft:quartz","minecraft:redstone","minecraft:resin"]}
 
 tellraw @a[tag=admin] {"text":"[QMC Datapack] Loaded successfully!","color":"green"}

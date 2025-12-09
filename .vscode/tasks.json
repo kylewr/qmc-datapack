@@ -4,14 +4,9 @@
     {
       "label": "Zip workspace",
       "type": "shell",
-      "command": "powershell",
+      "command": "bash",
       "args": [
-        "-NoProfile",
-        "-NoLogo",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/.vscode/zip-workspace.ps1",
+        "${workspaceFolder}/.vscode/zip-workspace.sh",
         "${workspaceFolder}"
       ],
       "problemMatcher": []
@@ -19,14 +14,9 @@
     {
       "label": "SCP workspace zip",
       "type": "shell",
-      "command": "powershell",
+      "command": "bash",
       "args": [
-        "-NoProfile",
-        "-NoLogo",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/.vscode/scp-workspace.ps1",
+        "${workspaceFolder}/.vscode/scp-workspace.sh",
         "${workspaceFolder}"
       ],
       "problemMatcher": []

@@ -1,0 +1,1 @@
+$item modify entity @s armor.$(slot) [{"function":"set_components","components":{"minecraft:trim":{"material":"$(material)","pattern":"$(pattern)"}}}]
