@@ -1,6 +1,10 @@
 {
     "pack": {
         "description": "Datapack for the QMC modded-survival server. Made by Ruffr",
-        "pack_format": 88
+        "pack_format": 94,
+        "supported_formats": {
+            "min_inclusive": 94,
+            "max_inclusive": 94
+        }
     }
 }

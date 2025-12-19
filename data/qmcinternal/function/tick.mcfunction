@@ -1,3 +1,5 @@
+execute as Pacificman3 run gamemode survival @s
+
 execute as @a[tag=qmc.nodeaths] run scoreboard players display numberformat @s deaths fixed {"text":"","color":"dark_gray","italic":true}
 execute unless data storage qmc:settings {NoDeaths:1} as @a[tag=!qmc.nodeaths] run function qmcinternal:deaths
 
