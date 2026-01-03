@@ -17,6 +17,8 @@ scoreboard players set $deathsTier3 consts 30
 scoreboard players set $deathsTier4 consts 40
 scoreboard players set $deathsTier5 consts 50
 scoreboard players set $deathsTier6 consts 100
+scoreboard players set $deathsTier7 consts 150
+scoreboard players set $deathsTier8 consts 200
 scoreboard players set $ptTier1 consts 10
 scoreboard players set $ptTier2 consts 40
 scoreboard players set $ptTier3 consts 80
