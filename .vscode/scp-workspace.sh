@@ -12,7 +12,7 @@ fi
 
 # Replace with your server details: user@hostname:/path/
 echo "Uploading $zip..."
-scp -v "$zip" crafty@100.73.184.119:/opt/crafty-controller/crafty/crafty-4/servers/9ace48de-2d8e-4eaa-b699-3ebc4d88a582/world/datapacks/
+scp -v "$zip" crafty@100.73.184.119:/opt/crafty-controller/crafty/crafty-4/servers/da8dc662-a564-4126-a7b8-d46198c9a64b/world/datapacks/
 
 if [ $? -eq 0 ]; then
     echo "Successfully uploaded $zip"

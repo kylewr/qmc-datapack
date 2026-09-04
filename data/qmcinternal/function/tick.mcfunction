@@ -1,5 +1,3 @@
-execute as Pacificman3 run gamemode survival @s
-
 # execute store result score #stoptemp qmc.temp run stopwatch query minecraft:2025christmas
 
 # execute as @a[tag=!2025christmas] run tellraw @s {"text":"Merry Christmas! As a special gift, please accept this 2025 Christmas Gift Package! Thank you for playing on the QuackingsMC network this year!","color":"red","bold":true}

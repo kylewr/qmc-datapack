@@ -1,5 +1,6 @@
 scoreboard objectives add consts dummy
 scoreboard objectives add ptcopy dummy
+scoreboard objectives add ptmin dummy
 scoreboard objectives add qmc.rainbow_tick_head dummy
 scoreboard objectives add qmc.temp dummy
 scoreboard objectives add qmc.lastScoreRanks dummy
